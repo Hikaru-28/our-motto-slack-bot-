@@ -5,7 +5,7 @@ function ourMotto() {
   var sheet = spreadsheet.getSheetByName('シート1');
   
   var maxRow = sheet.getDataRange().getLastRow();//シートの使用範囲のうち最終行を取得
-  var numRow = Math.floor(2+Math.random()*(maxRow-1)); //2～maxRowの間のランダムの整数をチョイス
+  var numRow = Math.floor(2+Math.random()*(maxRow-1)); //2～maxRowの間のランダムの整数を取得
   
   var quotation =sheet.getRange(numRow, 1).getValue();
   var motto = sheet.getRange(numRow, 2).getValue();
