@@ -3,8 +3,9 @@ function ourMotto() {
   
   var spreadsheet = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1bjlA2E13yhD09VAPtaR8KJS7cKQq8jcN8hqO44RwAvY/edit#gid=0');
   var sheet = spreadsheet.getSheetByName('シート1');
-  var maxRow = sheet.getDataRange().getLastRow();
-  var numRow = Math.floor(2+Math.random()*(maxRow-1)); 
+  
+  var maxRow = sheet.getDataRange().getLastRow();//シートの使用範囲のうち最終行を取得
+  var numRow = Math.floor(2+Math.random()*(maxRow-1)); //2～maxRowの間のランダムの整数をチョイス
   
   var quotation =sheet.getRange(numRow, 1).getValue();
   var motto = sheet.getRange(numRow, 2).getValue();
